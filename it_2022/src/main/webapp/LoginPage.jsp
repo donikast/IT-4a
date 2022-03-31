@@ -11,8 +11,7 @@
 	<div class="content">
 		<h1>Вход на потребител</h1>
 		<div class="form-container">
-			<form action="login" method="post">
-			
+			<form action="login" method="post">		
 				<div class="mt20-mb10">
 					<label for="username">Потребителско име</label> 
 					<input type="text" name="username" id="username"
@@ -23,11 +22,8 @@
 						name="password" id="password"
 						placeholder="Въведете парола с поне 8 символа" />
 				</div>
-			
 				<input type="submit" value="Вход" />
-
 			</form>
-
 		</div>
 	</div>
 </body>

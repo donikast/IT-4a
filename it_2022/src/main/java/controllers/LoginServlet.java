@@ -39,6 +39,11 @@ public class LoginServlet extends HttpServlet {
 		User user = new User(username,password);
 		
 		if(collection.ifExist(user)) {
+			
+			User loggedUser = collection.getUserByUsername(username);
+			
+			request.setAttribute("loggedUser", loggedUser);
+			
 			RequestDispatcher rd = request.getRequestDispatcher("/ProfilePage.jsp");
 			rd.forward(request, response);
 		}
@@ -49,10 +54,6 @@ public class LoginServlet extends HttpServlet {
 			out.print("<p>Невалидно име или парола!</p>");
 			RequestDispatcher rd = request.getRequestDispatcher("/LoginPage.jsp");
 			rd.include(request, response);
-		}
-		
-		
-
+		}	
 	}
-
 }

@@ -2,12 +2,11 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="bg">
-<head>
-<meta charset="UTF-8">
-<title>Вписване на потребител</title>
-<link rel="stylesheet" href="css/styles.css">
-</head>
+<jsp:include page="shared/head.jsp"/>
+
 <body>
+<jsp:include page="shared/header.jsp"/>
+
 	<div class="content">
 		<h1>Вход на потребител</h1>
 		<div class="form-container">
@@ -26,5 +25,7 @@
 			</form>
 		</div>
 	</div>
+	<jsp:include page="shared/footer.jsp"/>
+	
 </body>
 </html>

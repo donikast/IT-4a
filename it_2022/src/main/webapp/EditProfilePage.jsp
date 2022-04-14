@@ -14,12 +14,13 @@
 <jsp:getProperty property="personalName" name="loggedUser" /> -->
 
 
-	<% User user = (User) request.getAttribute("loggedUser"); %>
+	<% User user = (User) session.getAttribute("loggedUser"); %>
 <jsp:include page="shared/header.jsp"/>
 
 	<div class="content">
 	
 	<form action="user" method="post">
+		<input type="hidden" name="id" value="<%= user.getId() %>">
 		<div>
 			<div class="profile-image-container">
 				<img src="images/male.svg" />
@@ -94,6 +95,9 @@
 					<input type="text" name="street" value="<%= user.getAddress().getStreet() %>" />					 
 				</div>			
 			</div>
+		</div>
+		<div>
+		<input type="submit" value="Редактирай" />
 		</div>
 		</form>
 	</div>

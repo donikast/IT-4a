@@ -4,6 +4,18 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <filter>
+  	<filter-name>LoginAccessFilter</filter-name>
+  	<display-name>LoginAccessFilter</display-name>
+  	<description></description>
+  	<filter-class>filters.LoginAccessFilter</filter-class>
+  </filter>
+  <filter>
+  	<filter-name>ProfilePageAccessFilter</filter-name>
+  	<display-name>ProfilePageAccessFilter</display-name>
+  	<description></description>
+  	<filter-class>filters.ProfilePageAccessFilter</filter-class>
+  </filter>
   <servlet>
   	<servlet-name>RegistrationServlet</servlet-name>
   	<display-name>RegistrationServlet</display-name>
@@ -21,5 +33,11 @@
   	<display-name>UserServlet</display-name>
   	<description></description>
   	<servlet-class>controllers.UserServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LogoutServlet</servlet-name>
+  	<display-name>LogoutServlet</display-name>
+  	<description></description>
+  	<servlet-class>controllers.LogoutServlet</servlet-class>
   </servlet>
 </web-app>

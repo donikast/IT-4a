@@ -18,13 +18,21 @@
 <jsp:include page="shared/header.jsp"/>
 
 	<div class="content">
+	<% if(request.getAttribute("welcome")==null) { %>
+	<h2>Добре дошли!</h2>
+	<form action="cookie" method="post">
+	<input type="submit" value="Изключи" />
+	</form>
+	<% } %>
 		<div>
 			<div class="profile-image-container">
 				<img src="images/male.svg" />
 			</div>
 			<div class="profile-info-container">
 				<h2>Профилна информация</h2>
+				
 				<a href="user?id=<%=user.getId()%>&action=edit">Редактирай информацията</a>
+				
 				<p>Име: <%= user.getPersonalName() %>
 </p>
 				<p>Професия: <%= user.getJobTitle() %></p>

@@ -40,4 +40,39 @@
   	<description></description>
   	<servlet-class>controllers.LogoutServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>CookieServlet</servlet-name>
+  	<display-name>CookieServlet</display-name>
+  	<description></description>
+  	<servlet-class>controllers.CookieServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ErrorHandler</servlet-name>
+  	<display-name>ErrorHandler</display-name>
+  	<description></description>
+  	<servlet-class>controllers.ErrorHandler</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AsyncUpdate</servlet-name>
+  	<display-name>AsyncUpdate</display-name>
+  	<description></description>
+  	<servlet-class>controllers.AsyncUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AsyncUpdate</servlet-name>
+  	<url-pattern>/AsyncUpdate</url-pattern>
+  </servlet-mapping>
+  <error-page>
+  <error-code>404</error-code>
+  <location>/error</location>
+  </error-page>
+    <error-page>
+  <error-code>403</error-code>
+  <location>/error</location>
+  </error-page>
+    <error-page>
+  <error-code>500</error-code>
+  <location>/error</location>
+  </error-page>
+
 </web-app>

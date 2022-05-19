@@ -43,7 +43,7 @@ public class UserServlet extends HttpServlet {
 		
 		if(action!=null && !action.isEmpty() && action.equals("edit")) {
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/AsyncEditProfilePage.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/EditProfilePage.jsp");
 		rd.forward(request, response);
 		}
 		else {
@@ -74,7 +74,7 @@ public class UserServlet extends HttpServlet {
 			int skillValue = Integer.parseInt(request.getParameter("prof-skill-value"+i));
 			updatedUser.getProfessionalSkills().get(i).setSkillValue(skillValue);
 		}
-		
+		collection.updateXmlFile();
 		response.sendRedirect("user?id="+updatedUser.getId());
 
 	}

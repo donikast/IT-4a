@@ -1,7 +1,14 @@
 package models;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name="skill")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Skill {
-	
+	//@XmlElement(name="name")
 	private String skillName;
 	private int skillValue; 
 	
